@@ -1,8 +1,12 @@
 # Turtlesim Controller
 
-A simple controller for the ROS node turtlesim using NippleJS.
+A simple controller for the ROS turtlesim_node using NippleJS and Rosbridge.
 
 ![gif](.fig/demo.gif)
+
+It allows you to control the ROS turtlesim_node from a simple webpapp using Rosbridge.
+Move the turtle with the right joystick or clicking the buttons. 
+Change its orientation using the left joystick.
 
 
 ## Dependencies

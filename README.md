@@ -4,10 +4,18 @@ A simple controller for the ROS node turtlesim using NippleJS.
 
 ![gif](.fig/demo.gif)
 
+
 ## Dependencies
 - ROS Noetic
 - Rosbridge
 - NippleJS
+
+
+## Set up project
+```
+git clone https://github.com/beallasai/turtlesim-controller.git
+cd turtlesim-controller
+```
 
 
 ## Usage

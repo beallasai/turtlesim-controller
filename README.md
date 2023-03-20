@@ -1,6 +1,6 @@
 # Turtlesim Controller
 
-A simple controller for the ROS turtlesim_node using NippleJS and Rosbridge.
+A simple controller for the ROS turtlesim_node using [NippleJS](https://yoannmoi.net/nipplejs/) and [Rosbridge](http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge).
 
 ![gif](.fig/demo.gif)
 

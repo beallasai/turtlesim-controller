@@ -1,0 +1,9 @@
+name: my-session
+on_project_exit: tmux kill-session -t my-session
+windows:
+  - main:
+      layout: tiled
+      panes:
+        -  roslaunch rosbridge_server rosbridge_websocket.launch
+        -  sleep 1 && rosrun turtlesim turtlesim_node
+        -  sleep 2 && xdg-open index.html 

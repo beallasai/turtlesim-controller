@@ -2,7 +2,7 @@
 
 A virtual controller for the ROS turtlesim_node using NippleJS and Rosbridge.
 
-![gif](app/.fig/demo.gif)
+![gif](.fig/demo.gif)
 
 It allows you to control the ROS turtlesim_node from a simple webpapp using Rosbridge.
 - Move the turtle with the right joystick or clicking the buttons. 

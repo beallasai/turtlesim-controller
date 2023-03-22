@@ -1,44 +1,84 @@
 # Turtlesim Controller
 
-A simple controller for the ROS turtlesim_node using [NippleJS](https://yoannmoi.net/nipplejs/) and [Rosbridge](http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge).
+A virtual controller for the ROS turtlesim_node using NippleJS and Rosbridge.
 
-![gif](.fig/demo.gif)
+![gif](app/.fig/demo.gif)
 
 It allows you to control the ROS turtlesim_node from a simple webpapp using Rosbridge.
 - Move the turtle with the right joystick or clicking the buttons. 
 - Change its orientation using the left joystick.
 
-*This repo also contains a scripts folder, some extra code included to better know ROS functionalities using turtlesim_node.*
+You can execute the controller using tmuxinator or roslaunch, like a regular ROS node/pkg.
+
+*This repo also contains some .py files inside the scripts folder, some extra code included to better know ROS functionalities using turtlesim_node.*
 
 
 ## Dependencies
-- ROS Noetic
-- Rosbridge
-- NippleJS
+- **[ROS Noetic](http://wiki.ros.org/noetic)**: provides the main code to develop robot applications.
+- **[Rosbridge](http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge)**: provides a JSON API to ROS functionality for non-ROS programs.
+- **[NippleJS](https://yoannmoi.net/nipplejs/)**: provides a virtual joystick for touch capable interfaces.
 
 
-## Set up project
-1. Clone the repo:
-```
-git clone https://github.com/beallasai/turtlesim-controller.git
-```
-2. Move into project folder:
-```
-cd turtlesim-controller
-```
-3. Source ROS setup (do it everytime you want to use ROS commands):
+## Setup
+
+1. **Source ROS workspace**
 ```
 source /opt/ros/noetic/setup.bash
 ```
+2. **Create and set up the ROS project workspace**
+```
+mkdir turtlesim-controller-ws
+cd turtlesim-controller-ws
+mkdir src
+catkin_make
+```
+This may have created new folders, *build* and *devel*, and a *CMakeLists.txt* file inside *src*.
+
+3. **Clone the repo inside *src* folder**
+```
+cd src
+git clone https://github.com/beallasai/turtlesim-controller.git
+```
+
 
 ## Usage
-From the project folder, execute the `.tmuxinator.yml` file:
+There are two different ways to run the controller:
+- **roslaunch**
+
+1. Go back to the project folder (*turtlesim-controller-ws*)
+```
+cd ..
+```
+2. Source ROS workspace
+```
+source devel/setup.bash
+```
+3. Execute the *run.launch* file
+```
+roslaunch turtlesim-controller run.launch
+```
+  This will run everything in the same terminal
+
+ Close it with `ctrl+c`
+
+- **tmuxinator**
+1. Go to the folder with the *.tmuxinator.yml* file
+```
+cd turtlesim-controller/tmux/run/
+```
+
+2. Execute the file
 ```
 tmuxinator
 ```
-  This will open a tmux session with 3 panes:
-  1. Starts Rosbridge Server: `roslaunch rosbridge_server rosbridge_websocket.launch`
-  2. Starts turtlesim_node in a new terminal: `rosrun turtlesim turtlesim_node`
-  3. Opens the webapp in browser in a new terminal: `xdg-open index.html`
+This will open a tmux session with 3 panes:
+
+  - Starts Rosbridge Server
+  - Starts turtlesim_node
+  - Opens the webapp in browser
+  
+  Move between panes using `ctrl+b` &uarr;, &darr;, &larr;, &rarr; 
+  
+  Close the session with `tquit`
 
 ### Now you can control the turtle using joysticks or buttons!!!

@@ -1,0 +1,10 @@
+name: my-session
+on_project_exit: tmux kill-session -t my-session
+windows:
+  - main:
+      layout: tiled
+      pre: source macros.bash; sourceParentWorkspace
+      panes:
+        -  roslaunch rosbridge_server rosbridge_websocket.launch
+        -  waitForRos; rosrun turtlesim turtlesim_node
+        -  waitForRos; roslaunch turtlesim-controller app.launch 

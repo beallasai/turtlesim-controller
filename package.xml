@@ -2,7 +2,7 @@
 <package format="2">
 
   <!-- Main info -->
-  <name>my_robot_controller</name>
+  <name>turtlesim-controller</name>
   <version>0.0.0</version>
   <description>The my_robot_controller package</description>
   <maintainer email="bmllamas.ext@todo.todo">bmllamas.ext</maintainer>
@@ -17,11 +17,14 @@
   <build_depend>rospy</build_depend>
   <build_depend>turtlesim</build_depend>
   <build_depend>geometry_msgs</build_depend>
+  <build_depend>rosbridge_server</build_depend>
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>turtlesim</build_export_depend>
   <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>rosbridge_server</build_export_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>turtlesim</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>rosbridge_server</exec_depend>
 
 </package>

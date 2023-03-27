@@ -57,7 +57,7 @@ source devel/setup.bash
 ```
 roslaunch turtlesim-controller run.launch
 ```
-  This will run everything in the same terminal
+  This will run everything in the same terminal and open the webapp in browser
 
  Close it with `ctrl+c`
 
@@ -104,10 +104,7 @@ source devel/setup.bash
 ```
 roslaunch turtlesim-controller phoneRun.launch
 ```
-  This will run everything in the same terminal
 
- Close it with `ctrl+c`
- 
 **4.** Open the `IP:8000` in your phone browser
 
 ### Now you can move the turtle using your phone as a controller!!!

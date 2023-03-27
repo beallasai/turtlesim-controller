@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+  <node name="turtle" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+  <node name="phoneRun" pkg="turtlesim-controller" type="phoneRun.bash" output="screen"/>
+</launch>

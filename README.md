@@ -45,15 +45,15 @@ git clone https://github.com/beallasai/turtlesim-controller.git
 There are two different ways to run the controller:
 - **roslaunch**
 
-1. Go back to the project folder (*turtlesim-controller-ws*)
+**1.** Go back to the project folder (*turtlesim-controller-ws*)
 ```
 cd ..
 ```
-2. Source ROS workspace
+**2.** Source ROS workspace
 ```
 source devel/setup.bash
 ```
-3. Execute the *run.launch* file
+**3.** Execute the *run.launch* file
 ```
 roslaunch turtlesim-controller run.launch
 ```
@@ -62,12 +62,13 @@ roslaunch turtlesim-controller run.launch
  Close it with `ctrl+c`
 
 - **tmuxinator**
-1. Go to the folder with the *.tmuxinator.yml* file
+
+**1.** Go to the folder with the *.tmuxinator.yml* file
 ```
 cd turtlesim-controller/tmux/run/
 ```
 
-2. Execute the file
+**2.** Execute the file
 ```
 tmuxinator
 ```
@@ -82,3 +83,31 @@ This will open a tmux session with 3 panes:
   Close the session with `tquit`
 
 ### Now you can control the turtle using joysticks or buttons!!!
+
+
+## Phone controller
+You can also control the turtle with your phone:
+
+**1.** Make sure your PC and phone are connected to the same WiFi
+
+**2.** Change the line 4 in the *ros.js* file with your PC IP
+
+**3.** Run the webpage executing the *phoneRun.launch* file:
+
+- Go to the project folder (*turtlesim-controller-ws*)
+
+- Source ROS workspace
+```
+source devel/setup.bash
+```
+- Execute the *phoneRun.launch* file
+```
+roslaunch turtlesim-controller phoneRun.launch
+```
+  This will run everything in the same terminal
+
+ Close it with `ctrl+c`
+ 
+**4.** Open the `IP:8000` in your phone browser
+
+### Now you can move the turtle using your phone as a controller!!!
